@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Powerball電腦選號</title>
+<!--   功課的作品，有調整過機率，請勿當真，謝謝it's just homework,no serious,thanks   -->
     <style>
         body {
             margin: 0;
@@ -379,25 +380,6 @@
             transform: scale(0.9);
         }
 
-        /*  */
-        /* .calculator {
-            width: 100px;
-            height: 100px;
-            background-color: black;
-            position: fixed;
-            left: 90%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            padding: 20px 0px 0px 100px;
-            border-radius: 50px;
-            color: white;
-        }
-
-        input {
-            padding: 7px;
-            width: 70%;
-            margin-top: 7px;
-        } */
     </style>
 </head>
 
@@ -445,41 +427,9 @@
         </div>
     </div>
 
-    <!-- <div class="calculator">
-        <h1>計算機</h1>
-        <p>您付的錢 (₹) :</p>
-        <p> <input id="amount" type="number" onchange="Calculate()"></p>
-
-        <p>玩的次數 :</p>
-        <p> <input id="playNum" type="number" onchange="Calculate()" readonly></p>
-
-        <p>中獎金額 :</p>
-        <p> <input id="prizeNum" type="number" onchange="Calculate()" readonly></p>
-
-        <h2 id="total"></h2>
-    </div> -->
     <script src="comlib.js"></script>
     <script src="jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
-
-        // const amount = document.querySelector("#amount").value;
-        // let playNum = 0;
-        // let prizeNum = 0;
-        // document.querySelector("#playNum").value = playNum;
-        // document.querySelector("#prizeNum").value = prizeNum
-        // if (amount < 2) {
-        //     return;
-        // }
-        // if (playNum < 0) {
-        //     return;
-        // }
-        // function Calculate() {
-        //     // Calculating total payment
-        //     const total = playNum * (-2) + prizeNum + amount;
-
-        //     document.querySelector("#total")
-        //         .innerHTML = "總金額 : (₹)" + total;
-        // }
 
         window.addEventListener('load', function () {
             var modal = document.querySelector('.modal');
