@@ -1,0 +1,311 @@
+#parallaxSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallaxContainer {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 100vh;
+}
+
+/* .layer-1 {
+  animation: parallax_fg linear 20s infinite both;
+  background: url(lay8.svg) 0 100% repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 975px;
+} */
+
+.layer-4 {
+  animation: parallax_fg linear 75s infinite both;
+  background: url(/AKCO/product_img/4.png) 0 100% repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 468px;
+}
+
+.layer-5 {
+  animation: parallax_fg linear 95s infinite both;
+  background: url(/AKCO/product_img/5.png) 0 100% repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 311px;
+}
+
+.layer-6 {
+  animation: parallax_fg linear 120s infinite both;
+  background: url(/AKCO/product_img/6.png) 0 100% repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 222px;
+}
+
+.sportsCar-1,
+.sportsCar-2 {
+  background: url(/AKCO/product_img/tecnica.png) 0 100% no-repeat;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 75px;
+  animation: parallax_sportsCar linear 1.5s infinite both;
+}
+
+.sportsCar-2 {
+  animation: parallax_sportsCar linear 0.9s infinite both;
+}
+
+@keyframes parallax_fg {
+  0% {
+    background-position: 2765px 100%;
+  }
+
+  100% {
+    background-position: 550px 100%;
+  }
+}
+
+@keyframes parallax_sportsCar {
+  0% {
+    background-position: -300px 100%;
+  }
+
+  100% {
+    background-position: 2000px 100%;
+  }
+}
+
+/* animation to fill text */
+
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  50%,
+  70% {
+    width: 100%;
+  }
+}
+
+/*  */
+.hero {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.accountText {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.accountText h1 {
+  position: absolute;
+  font-size: 6vh;
+  -webkit-text-stroke: 2px black;
+  text-transform: uppercase;
+}
+
+.accountText h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: black;
+  -webkit-text-stroke: 0px black;
+  border-right: 2px solid black;
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+  white-space: nowrap;
+}
+
+/*  */
+
+.account {
+  box-sizing: border-box;
+  position: relative;
+  padding: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 25px 50px rgba(255, 255, 255, 0.1);
+}
+
+.account h2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.account .inputBox {
+  position: relative;
+  height: 60px;
+}
+
+.account .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 9px 0px 9px 0px;
+  outline: none;
+  font-size: 1.25em;
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.account .inputBox ::placeholder {
+  margin-left: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.account .inputBox #btn {
+  position: relative;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #2c3c99, #00b0ff);
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.account .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account .group a {
+  font-size: 1.25em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.account .group a:nth-child(2) {
+  text-decoration: underline;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  height: 45px;
+  margin: 15px 0 15px 0;
+  padding: 0px 10px 0px 10px;
+  border: 3px solid #ccc;
+  outline: none;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  text-align: left;
+  background: transparent;
+  color: #000;
+  background: #fff;
+  font-size: 18px;
+  -webkit-transition: border-color ease-in-out .5s, box-shadow ease-in-out .5s;
+  transition: border-color ease-in-out .5s, box-shadow ease-in-out .5s;
+}
+
+.form-input:focus {
+  border-color: #c1f0ff;
+}
+
+.form-input+.form-label {
+  display: block;
+  pointer-events: none;
+  margin: 0 0 0 15px;
+  line-height: 0px;
+  margin-top: -43px;
+  margin-bottom: 43px;
+  transition: transform 600ms;
+
+}
+
+.form-label {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.form-input:focus+.form-label {
+  transform: translateY(-30px);
+  color: #c1f0ff;
+  font-size: 18px;
+}
+
+.input-focus-label {
+  transform: translateY(-111px);
+  color: #c1f0ff;
+  font-size: 18px;
+}
+
+.input-focus {
+  border-color: #c1f0ff;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.green-text {
+  color: #a5ffa8 !important;
+}
+
+.red-text {
+  color: #ff4a3d !important;
+}
+
+select {
+  position: relative;
+}

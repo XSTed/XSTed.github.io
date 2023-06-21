@@ -1,0 +1,161 @@
+        /* first carousel */
+        .container-fluid.carousel {
+            margin-top: -105px;
+        }
+
+        .carousel-item video {
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        #carouselExampleCaptions .carousel-indicators {
+            margin-bottom: 90px;
+        }
+
+        #carouselExampleCaptions .carousel-indicators .active {
+            width: 33px;
+            height: 33px;
+            margin-right: 6px;
+            margin-left: 3px;
+            box-sizing: border-box;
+            font-size: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        #carouselExampleCaptions .carousel-indicators .active:before {
+            content: "";
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid #de0000cb;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            animation: change 3s linear forwards;
+        }
+
+        @keyframes change {
+            25% {
+                clip-path: polygon(50% 50%, 0 0, 0 100%, 0 100%, 0 100%, 0 100%);
+            }
+
+            50% {
+                clip-path: polygon(50% 50%, 0 0, 0 100%, 100% 100%, 100% 100%, 100% 100%);
+            }
+
+            75% {
+                clip-path: polygon(50% 50%, 0 0, 0 100%, 100% 100%, 100% 0, 100% 0);
+            }
+
+            100% {
+                clip-path: polygon(50% 50%, 0 0, 0 100%, 100% 100%, 100% 0, 0% 0%);
+            }
+        }
+
+        /* second carousel */
+        .carousel-inner .carousel-item {
+            transition: transform 1s ease;
+        }
+
+        #carousel2 .carousel-item img {
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .h1-carousel {
+            width: 100%;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(2, 15, 19, 0.7);
+            font-family: "Julius Sans One";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 4vw;
+            /*transition: 0.4s;*/
+        }
+
+        .carousel-caption {
+            top: 40%;
+        }
+
+        .caption-top {
+            position: relative;
+            /*absolute*/
+            top: 0;
+            /*<= added*/
+            opacity: 1;
+            transition: .4s;
+        }
+
+        .caption-top.hidden {
+            top: -90vh;
+            /*0*/
+            opacity: 0;
+            transition: .4s;
+        }
+
+        .caption-bottom {
+            position: relative;
+            bottom: 4vh;
+            opacity: 1;
+            transition: .4s;
+        }
+
+        .caption-bottom.hidden {
+            bottom: -90vh;
+            opacity: 0;
+            transition: .4s;
+        }
+
+        /* category */
+        .box {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 650px;
+            transform: translateX(-400%);
+            transition: transform 0.6s ease;
+            overflow: hidden;
+        }
+
+        .box.show {
+            transform: translateX(0);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* add this line */
+        }
+
+        .box img {
+            transition: 3s;
+            width: 100%;
+            height: 100%;
+            /* add this line */
+        }
+
+        .box:hover img {
+            transform: scale(1.5) rotate(15deg);
+        }

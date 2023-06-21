@@ -1,0 +1,312 @@
+/* 未連結 */
+#accordionExample a:link {
+    margin-left: 15px;
+    color: rgba(27, 0, 99, 0.99);
+    text-decoration: none;
+}
+
+/* 已連結過 */
+#accordionExample a:visited {
+    color: rgba(123, 21, 0, 0.99);
+    text-decoration: none;
+}
+
+/* 滑鼠移至連結 */
+#accordionExample a:hover {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* 選擇的連結 */
+#accordionExample a:active {
+    color: rgba(27, 0, 99, 0.99);
+    text-decoration: none;
+}
+
+#menu {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.accordion-button {
+    font-size: 1.5vw;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #000;
+    -webkit-text-stroke: 0.5px #FFF;
+    background: linear-gradient(153deg, rgba(255, 36, 39, 0.9) 0%, rgba(63, 0, 0, 0.9) 75%, rgba(150, 0, 0, 0.9) 100%);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.accordion-body table td:hover {
+    background: linear-gradient(153deg, rgba(255, 12, 12, 0.9) 0%, rgba(120, 0, 0, 0.9) 75%, rgba(63, 0, 0, 0.9) 100%);
+}
+
+.accordion-body {
+    padding: 0px;
+}
+
+.row.text-center.mb-3 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0.3rem 0.39rem 0.39rem rgba(255, 255, 255, 0.3);
+    transition: box-shadow 3s linear infinite;
+}
+
+.card::after {
+    box-shadow: 0.3rem 0.39rem 0.39rem rgba(255, 0, 0, 0.3);
+}
+
+.card-img-top {
+    border: none;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms ease-out;
+    animation: none;
+}
+
+.card-img-top:hover {
+    transform: scale(1.17);
+}
+
+.card:hover {
+    box-shadow: 0.39rem 0.51rem 0.51rem #af0000;
+}
+
+/* 5 https://codepen.io/yuhomyan/pen/OJMejWJ */
+.btn-5 {
+    padding: 0;
+    border: none;
+}
+
+.btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 300ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 600ms ease all;
+}
+
+/* 更多資訊 */
+.card .card-body a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #001e81;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .6s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.card .card-body a:hover {
+    background: #ff3939;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #f40303,
+        0 0 6px #f40303,
+        0 0 9px #f40303,
+        0 0 12px #f40303;
+}
+
+.card .card-body a span {
+    position: absolute;
+    display: block;
+}
+
+.card .card-body a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f40303);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.card .card-body a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f40303);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.card .card-body a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f40303);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.card .card-body a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f40303);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/* 11 */
+.btn-11 {
+    width: 93px;
+    height: 42px;
+    position: relative;
+    border-radius: 3px;
+    line-height: 42px;
+    overflow: hidden;
+    border: none;
+    /* background: linear-gradient(153deg, rgb(180, 210, 255) 0%, rgb(30, 0, 150) 81%,rgb(12, 0, 108) 100%); */
+    background: linear-gradient(153deg, rgba(255, 36, 39, 0.9) 0%, rgba(120, 0, 0, 0.9) 75%, rgba(63, 0, 0, 0.9) 100%);
+    color: #fff;
+    margin-top: 3px;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 3px lightblue;
+}
+
+.btn-11::after {
+    content: "";
+    background: linear-gradient(to right bottom, #ffffff00 30%, #ffffff88 50%, #ffffff00 70%);
+    transform: translateX(-75%);
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    right: -100%;
+    bottom: -100%;
+    animation: demo2 2s linear infinite;
+}
+
+.btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+    /* background: linear-gradient(693deg, rgb(192, 249, 255) 0%, rgb(9, 0, 129) 100%); */
+    box-shadow: 1px 1px 1px lightblue;
+}
+
+.btn-11::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.btn-11:active {
+    box-shadow: 6px 6px 9px 0 rgba(255, 255, 255, .3),
+        -6px -6px 9px 0 rgba(116, 125, 136, .2),
+        inset -6px -6px 9px 0 rgba(255, 255, 255, .2),
+        inset 6px 6px 9px 0 rgba(0, 0, 0, .2);
+}
+
+/* 宣告關鍵影格為動畫、動畫名稱、開始、結束 */
+@keyframes demo2 {
+    50% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(75%);
+    }
+}
